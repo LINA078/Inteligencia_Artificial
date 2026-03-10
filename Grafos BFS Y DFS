@@ -1,0 +1,213 @@
+import networkx as nx
+import matplotlib.pyplot as plt
+from collections import deque
+import time
+import sys
+from IPython.display import clear_output
+
+
+# -------- GRAFO 1 (BFS) --------
+
+G1 = nx.Graph()
+
+edges1 = [
+    ('A','B'),('A','C'),
+    ('B','D'),('B','E'),
+    ('C','F')
+]
+
+G1.add_edges_from(edges1)
+
+pos1 = nx.spring_layout(G1)
+
+
+# -------- GRAFO 2 (DFS) --------
+
+G2 = nx.Graph()
+
+edges2 = [
+    ('A','B'),('A','C'),
+    ('C','D'),('D','E'),
+    ('E','F')
+]
+
+G2.add_edges_from(edges2)
+
+pos2 = nx.spring_layout(G2)
+
+
+paso = 0
+
+
+# -------- FUNCIÓN PARA DIBUJAR ANIMACIÓN --------
+
+def dibujar(G, pos, arbol, visitados, actual, tipo):
+
+    global paso
+    paso += 1
+
+    plt.figure(figsize=(6,6))
+
+    colores = []
+
+    for nodo in G.nodes():
+
+        if nodo == actual:
+            colores.append("#ff9ecb")   # rosado
+
+        elif nodo in visitados:
+            colores.append("#90ee90")   # verde claro
+
+        else:
+            colores.append("#d3d3d3")   # gris
+
+
+    nx.draw(G,pos,with_labels=True,node_color=colores,node_size=1300)
+
+    nx.draw_networkx_edges(
+        G,
+        pos,
+        edgelist=arbol,
+        width=4,
+        edge_color="red"
+    )
+
+    plt.title(f"{tipo} - Paso {paso}")
+
+    clear_output(wait=True)
+    plt.show()
+
+    time.sleep(2)
+
+
+# -------- BFS --------
+
+def bfs(G,pos,inicio):
+
+    global paso
+    paso = 0
+
+    cola = deque([inicio])
+    visitados = []
+    arbol = []
+
+    memoria = sys.getsizeof(cola)
+
+    while cola:
+
+        nodo = cola.popleft()
+
+        if nodo not in visitados:
+
+            visitados.append(nodo)
+
+            dibujar(G,pos,arbol,visitados,nodo,"BFS")
+
+            for vecino in G.neighbors(nodo):
+
+                if vecino not in visitados:
+
+                    cola.append(vecino)
+                    arbol.append((nodo,vecino))
+
+            memoria = max(memoria, sys.getsizeof(cola))
+
+    return memoria, arbol
+
+
+# -------- DFS --------
+
+def dfs(G,pos,inicio):
+
+    global paso
+    paso = 0
+
+    pila = [inicio]
+    visitados = []
+    arbol = []
+
+    memoria = sys.getsizeof(pila)
+
+    while pila:
+
+        nodo = pila.pop()
+
+        if nodo not in visitados:
+
+            visitados.append(nodo)
+
+            dibujar(G,pos,arbol,visitados,nodo,"DFS")
+
+            for vecino in G.neighbors(nodo):
+
+                if vecino not in visitados:
+
+                    pila.append(vecino)
+                    arbol.append((nodo,vecino))
+
+            memoria = max(memoria, sys.getsizeof(pila))
+
+    return memoria, arbol
+
+
+# -------- EJECUCIÓN --------
+
+print("RECORRIDO BFS EN GRAFO 1")
+
+mem_bfs, arbol_bfs = bfs(G1,pos1,'A')
+
+time.sleep(2)
+
+print("RECORRIDO DFS EN GRAFO 2")
+
+mem_dfs, arbol_dfs = dfs(G2,pos2,'A')
+
+
+# -------- COMPARACIÓN --------
+
+print("\nCOMPARACIÓN FINAL")
+
+print("Memoria BFS:",mem_bfs,"bytes")
+print("Memoria DFS:",mem_dfs,"bytes")
+
+
+# -------- MOSTRAR LOS DOS GRAFOS FINALES --------
+
+plt.figure(figsize=(12,5))
+
+
+# Grafo BFS final
+
+plt.subplot(1,2,1)
+
+nx.draw(G1,pos1,with_labels=True,node_size=1300)
+
+nx.draw_networkx_edges(
+    G1,
+    pos1,
+    edgelist=arbol_bfs,
+    width=4,
+    edge_color="red"
+)
+
+plt.title("Recorrido Final BFS")
+
+
+# Grafo DFS final
+
+plt.subplot(1,2,2)
+
+nx.draw(G2,pos2,with_labels=True,node_size=1300)
+
+nx.draw_networkx_edges(
+    G2,
+    pos2,
+    edgelist=arbol_dfs,
+    width=4,
+    edge_color="red"
+)
+
+plt.title("Recorrido Final DFS")
+plt.show()
+
+plt.show()
