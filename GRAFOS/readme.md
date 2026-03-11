@@ -1,4 +1,4 @@
-# Inteligencia_Artificial
+# GRAFOS BFS Y DFS
 Este codigo tiene como objetivo mostrar de manera visual cómo funcionan los algoritmos de búsqueda en grafos BFS (Breadth First Search) y DFS (Depth First Search).
 El programa crea dos grafos diferentes y aplica cada algoritmo sobre uno de ellos. Durante la ejecución se puede observar paso a paso cómo el algoritmo va recorriendo los nodos del grafo. Cada paso se muestra como una animación para entender mejor el proceso de exploración.
 Al final del programa se muestran los dos grafos con su recorrido completo, lo que permite comparar cómo se comporta cada algoritmo.
