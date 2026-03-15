@@ -1,1 +1,44 @@
+Algoritmo A* con Visualización en Cuadrícula (Python)
+Descripción
+Este proyecto implementa el algoritmo de búsqueda A* (A-Star) para encontrar el camino más corto entre dos puntos dentro de un tablero tipo cuadrícula con obstáculos.
+El programa muestra de forma gráfica y animada:
+ Cómo el algoritmo explora el espacio
+ Qué nodos visita
+ El camino óptimo encontrado
+ El recorrido final desde el inicio hasta el objetivo
+Objetivo
+Simular el funcionamiento del algoritmo A* para resolver problemas de búsqueda de rutas, mostrando visualmente cada paso del proceso.
+Caracteristicas
+Implementación del algoritmo A* desde cero
+ Uso de heurística Manhattan
+ Visualización paso a paso
+ Numeración de nodos explorados
+ Representación gráfica del camino final con flechas
+ Tablero configurable con obstáculos
+ Animación compatible con Jupyter Notebook y Google Colab
+Funcionamiento
+El algoritmo A* encuentra el camino óptimo evaluando cada nodo mediante la función:
+f(n) = g(n) + h(n)
+Donde:
+g(n) → costo real desde el inicio hasta el nodo actual
+h(n) → estimación del costo restante hasta el objetivo
+f(n) → costo total estimado
+La heurística utilizada es la distancia Manhattan, adecuada para movimientos en cuatro direcciones.
+Representacion visual del tablero
+En la animación se utilizan los siguientes elementos:
+🔴 A (rojo) → Punto de inicio
+🟢 B (verde) → Objetivo o meta
+⬛ Negro → Obstáculos (no se puede pasar)
+🔵 Números azules → Orden de exploración de nodos
+🟠 Flechas naranjas → Camino óptimo final
+Como ejecutar
+Opción recomendada: Google Colab 
+Copia el código en una celda
+Ejecuta la celda
+Observa la animación del algoritmo
+
+
+
+
+
 
