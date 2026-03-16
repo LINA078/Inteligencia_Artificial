@@ -26,7 +26,7 @@ EJEMPLO
 Piedra, Papel o Tijera
 Simulación del juego clásico entre un jugador y la computadora.
 
-Descripción
+DESCRIPCION DEL JUEGO PIEDRA PAPEL O TIJERA
 Cada participante elige simultáneamente:
 Piedra
 Papel
@@ -43,4 +43,44 @@ Ejecutar el notebook
 Elegir una opción (1, 2 o 3)
 Ver el resultado contra la computadora
 
+DESCRIPCION DEL JUEGO DE RECLUSOS
 
+El programa permite analizar cómo dos reclusos toman decisiones estratégicas sin poder comunicarse entre sí.
+Es un modelo matemático que muestra el conflicto entre:
+
+🤝 Cooperar (callar)
+⚠️ Traicionar (delatar)
+Cada prisionero debe decidir sin saber qué hará el otro.
+Aunque cooperar es lo mejor para ambos, la decisión racional individual suele ser traicionar.
+
+Escenario del problema
+
+Dos reclusos son arrestados y aislados.
+Las autoridades les ofrecen el mismo trato:
+🤐 Si ambos callan → reciben una pena leve
+🗣️ Si uno delata → queda libre y el otro recibe pena máxima
+⚠️ Si ambos delatan → ambos reciben una pena media
+
+OBJETIVO DEL PROGRAMA
+
+Simular las decisiones de los reclusos y mostrar las consecuencias para cada uno.
+Permite comprender:
+Toma de decisiones estratégicas
+Conflicto entre interés individual y colectivo
+Resultados dependientes de múltiples agentes
+Conceptos básicos de Teoría de Juegos
+
+COMO EJECUTAR EN COLAB
+Abrir el notebook en Google Colab
+Ejecutar las celdas
+Seleccionar las decisiones de los prisioneros
+Observar el resultado mostrado en pantalla
+Funcionamiento del código
+
+EL PROGRAMA REALIZA LOS SIGUIENTES PASOS:
+
+Define las posibles decisiones (Callar o Delatar)
+Contiene una matriz con los castigos correspondientes
+Recibe las elecciones de los jugadores
+Busca el resultado según la combinación elegida
+Muestra las condenas de cada prisionero
