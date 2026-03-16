@@ -1,1 +1,107 @@
-
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "provenance": [],
+      "mount_file_id": "1glJUONjAVfm31xCMwCOrgg8ie5MzUvu5",
+      "authorship_tag": "ABX9TyPY0k1g5ReF8t6/9juC3K02",
+      "include_colab_link": true
+    },
+    "kernelspec": {
+      "name": "python3",
+      "display_name": "Python 3"
+    },
+    "language_info": {
+      "name": "python"
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "view-in-github",
+        "colab_type": "text"
+      },
+      "source": [
+        "<a href=\"https://colab.research.google.com/github/LINA078/Inteligencia_Artificial/blob/main/TEORIA%20DE%20JUEGOS/RECLUSOS\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": 1,
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "1nFv_RUteHsK",
+        "outputId": "08da9f77-bea8-4919-d7ee-7a56442827fe"
+      },
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "🎮 PIEDRA - PAPEL - TIJERA\n",
+            "Escribe: piedra, papel o tijera\n",
+            "Escribe 'salir' para terminar\n",
+            "\n",
+            "Tu elección: PIEDRA\n",
+            "🤖 Computadora eligió: papel\n",
+            "🏆 Resultado: Perdiste 😢\n",
+            "\n",
+            "Tu elección: PAPEL\n",
+            "🤖 Computadora eligió: tijera\n",
+            "🏆 Resultado: Perdiste 😢\n",
+            "\n",
+            "Tu elección: TIJERA\n",
+            "🤖 Computadora eligió: piedra\n",
+            "🏆 Resultado: Perdiste 😢\n",
+            "\n",
+            "Tu elección: SALIR\n",
+            "👋 Gracias por jugar\n"
+          ]
+        }
+      ],
+      "source": [
+        "import random\n",
+        "opciones = [\"piedra\", \"papel\", \"tijera\"]\n",
+        "def ganador(jugador, computadora):\n",
+        "\n",
+        "    if jugador == computadora:\n",
+        "        return \"Empate 😐\"\n",
+        "\n",
+        "    if (jugador == \"piedra\" and computadora == \"tijera\") or \\\n",
+        "       (jugador == \"papel\" and computadora == \"piedra\") or \\\n",
+        "       (jugador == \"tijera\" and computadora == \"papel\"):\n",
+        "        return \"Ganaste 🎉\"\n",
+        "\n",
+        "    return \"Perdiste 😢\"\n",
+        "\n",
+        "print(\"🎮 PIEDRA - PAPEL - TIJERA\")\n",
+        "print(\"Escribe: piedra, papel o tijera\")\n",
+        "print(\"Escribe 'salir' para terminar\\n\")\n",
+        "\n",
+        "while True:\n",
+        "\n",
+        "    jugador = input(\"Tu elección: \").lower()\n",
+        "\n",
+        "    if jugador == \"salir\":\n",
+        "        print(\"👋 Gracias por jugar\")\n",
+        "        break\n",
+        "\n",
+        "    if jugador not in opciones:\n",
+        "        print(\"⚠️ Opción inválida\\n\")\n",
+        "        continue\n",
+        "\n",
+        "    computadora = random.choice(opciones)\n",
+        "\n",
+        "    print(f\"🤖 Computadora eligió: {computadora}\")\n",
+        "\n",
+        "    resultado = ganador(jugador, computadora)\n",
+        "\n",
+        "    print(f\"🏆 Resultado: {resultado}\\n\")"
+      ]
+    }
+  ]
+}
