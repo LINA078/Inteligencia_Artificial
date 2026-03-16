@@ -1,15 +1,5 @@
 import random
-
-# =========================
-# OPCIONES
-# =========================
-
 opciones = ["piedra", "papel", "tijera"]
-
-# =========================
-# FUNCION PARA DETERMINAR GANADOR
-# =========================
-
 def ganador(jugador, computadora):
 
     if jugador == computadora:
@@ -21,11 +11,6 @@ def ganador(jugador, computadora):
         return "Ganaste 🎉"
 
     return "Perdiste 😢"
-
-
-# =========================
-# JUEGO PRINCIPAL
-# =========================
 
 print("🎮 PIEDRA - PAPEL - TIJERA")
 print("Escribe: piedra, papel o tijera")
