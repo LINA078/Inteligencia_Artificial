@@ -22,5 +22,25 @@ ESTRATEGIAS
 Las opciones que puede elegir cada jugador.
 RESULTADOS(PAGOS O GANANCIAS)
 Lo que cada uno gana o pierde según las decisiones tomadas.
+EJEMPLO
+Piedra, Papel o Tijera
+Simulación del juego clásico entre un jugador y la computadora.
+
+Descripción
+Cada participante elige simultáneamente:
+Piedra
+Papel
+Tijera
+Las reglas determinan el ganador.
+Qué muestra la simulación
+ Juego competitivo de suma cero
+ Decisiones simultáneas
+ Importancia de la aleatoriedad
+ Estrategias impredecibles
+
+Cómo ejecutarlo en Colab
+Ejecutar el notebook
+Elegir una opción (1, 2 o 3)
+Ver el resultado contra la computadora
 
 
