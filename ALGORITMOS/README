@@ -1,3 +1,6 @@
+QUE ES EL ALGORITMO DE A*
+
+
 Algoritmo A* con Visualización en Cuadrícula (Python)
 Descripción
 Este proyecto implementa el algoritmo de búsqueda A* (A-Star) para encontrar el camino más corto entre dos puntos dentro de un tablero tipo cuadrícula con obstáculos.
