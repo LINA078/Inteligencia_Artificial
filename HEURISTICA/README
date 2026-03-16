@@ -25,4 +25,36 @@ h(n) → lo que “crees” que falta
 f(n) → el valor para decidir a dónde ir
 El algoritmo elige siempre el nodo con menor f(n).
 
+EJEMPLO GPS
 
+Este proyecto implementa un sistema básico de navegación tipo GPS que calcula la mejor ruta entre dos puntos utilizando el algoritmo A*
+(A estrella), uno de los métodos más eficientes de búsqueda informada.
+
+OBJETIVO DEL PROYECTO
+Simular cómo un GPS encuentra la mejor ruta entre dos ubicaciones dentro de un mapa representado como una cuadrícula o grafo.
+El programa permite:
+Calcular rutas óptimas
+Visualizar el recorrido
+Mostrar nodos explorados
+Entender el funcionamiento de la heurística
+
+FUNCIONAMIENTO
+El proceso general es:
+ Se define un punto de inicio
+ Se define un punto destino
+ El algoritmo explora posibles caminos
+ Calcula el costo total estimado para cada nodo
+ Selecciona el camino con menor costo hasta llegar al objetivo
+
+COMO EJECUTAR EN COLAB
+Abrir el notebook en Google Colab
+Ejecutar todas las celdas
+Definir el punto de inicio y destino
+Observar la ruta calculada y la visualización
+
+QUE MUESTRA LA SIMULACION
+ Camino óptimo encontrado
+ Nodos visitados
+ Orden de exploración
+ Representación visual del mapa
+ Dirección del recorrido (si incluye flechas)
