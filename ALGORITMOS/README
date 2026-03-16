@@ -1,5 +1,63 @@
 QUE ES EL ALGORITMO DE A*
 
+Es un algoritmo potente y ampliamente utilizado para recorrer grafos y encontrar grafos caminos. Encuentra el camino más corto entre un nodo
+inicial y un objetivo en un grafo ponderado
+
+COMO FUNCIONA EL ALGORITMO A*
+El algoritmo A* combina los mejores aspectos de otros dos algoritmos.
+1. Algoritmo de Dijkstra: Este algoritmo encuentra el camino mas corto a todos los nodos desde un unico nodo origen.
+2. Busqueda codisiosa del mejor primero: Este algoritmo explora el nodo que parece estar mas cerca del objetivo, basandose en una funcion heuristica.
+
+COMPONENTES CLAVES
+para entender El algoritmo A* tienes que estar familiarizado con estos conceptos.
+NODOS: Puntos en tu grafico (como las interceciones en un mapa).
+BORDES: onexiones entre nodos ( como carreteras que conectan intercepciones).
+COSTE DE LA RUTA: El coste real de pasar de un nodo a otro.
+HEURISTICA: Un coste estimado desde cualquier nodo hasta el objetivo.
+ESPACION DE BUSQUEDA: La coleccion de todos los caminos posibles a explorar.
+
+Aplicaciones reales
+ Videojuegos — enemigos que persiguen
+ GPS — rutas en mapas
+ Robótica — navegación autónoma
+ Vehículos autónomos
+ Logística y transporte
+ Resolución de puzzles
+ Planeación de rutas en hospitales
+
+TIPO DE ALGORITMO
+A* es:
+Búsqueda informada
+ Algoritmo de grafos
+ Algoritmo de optimización
+ Pathfinding (búsqueda de caminos)
+
+FORMULA FUNDAMENTAL
+f(n)=g(n)+h(n)
+significado
+g(n) — costo real
+Distancia desde el inicio hasta el nodo n.
+g(n) — costo real
+Distancia desde el inicio hasta el nodo n.
+
+como funciona el algoritmo A*
+1. empieza en el nodo inicial
+se coloca en una lista de nodos por explorar.
+2. evalua vecinos
+mira todas las opciones alrededor
+3. calcula f(n)
+para cada vecino calcula.
+g(n)
+h(n)
+f(n)
+4. elige el mejor nodo
+el que tenga menor f(n)
+5. repite hasta llegar a la meta
+6. reconstruye el camino
+siguiendo los nodos anteriores.
+
+EJEMPLO
+BUSQUEDA DE CAMINOS CON A*
 
 Algoritmo A* con Visualización en Cuadrícula (Python)
 Descripción
