@@ -1,1 +1,28 @@
+HEURISTICA
+La búsqueda heurística es un enfoque que, en lugar de revisar cada posible solución para un problema, 
+utiliza reglas o «trucos» que ayudan a reducir las opciones a considerar.
+
+CARACTERISTICAS PRINCIPALES
+Eficiencia: La búsqueda heurística se enfoca en reducir el tiempo y los recursos necesarios para encontrar una solución.
+Flexibilidad: Se puede aplicar en una variedad de campos, desde la resolución de rompecabezas hasta la toma de decisiones en sistemas complejos.
+Información parcial: No requiere conocer todo el espacio del problema; puede operar con información incompleta.
+Resultados satisfactorios: A menudo se utiliza cuando es más importante obtener una solución rápida y satisfactoria que una solución óptima.
+
+Para qué sirve?
+Sirve para:
+Encontrar soluciones más rápido
+Reducir cálculos innecesarios
+Guiar algoritmos de búsqueda
+Tomar decisiones eficientes
+En tu código del algoritmo A★ ⭐, la heurística indica:
+
+¿Cómo funciona?
+En A★ se usa esta fórmula:
+Costo total estimado = costo recorrido + estimación restante
+👉 f(n) = g(n) + h(n)
+g(n) → lo que ya recorriste
+h(n) → lo que “crees” que falta
+f(n) → el valor para decidir a dónde ir
+El algoritmo elige siempre el nodo con menor f(n).
+
 
