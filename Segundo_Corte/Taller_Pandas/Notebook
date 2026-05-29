@@ -4,8 +4,7 @@
   "metadata": {
     "colab": {
       "provenance": [],
-      "toc_visible": true,
-      "authorship_tag": "ABX9TyO59lJn+s/1u7CBc4Cj88/F",
+      "authorship_tag": "ABX9TyO0VZdPPb7g0VbBmruU43ls",
       "include_colab_link": true
     },
     "kernelspec": {
@@ -53,7 +52,7 @@
       "metadata": {
         "id": "eWhpQmLJEJ44"
       },
-      "execution_count": 4,
+      "execution_count": null,
       "outputs": []
     },
     {
@@ -68,201 +67,31 @@
     {
       "cell_type": "code",
       "source": [
-        "df=pd.read_excel(\"/content/Tecnologia.xlsx\")\n",
+        "url=\"https://raw.githubusercontent.com/LINA078/Inteligencia_Artificial/main/Segundo_Corte/Taller_Pandas/Tecnologia.xlsx\"\n",
+        "df=pd.read_excel(url)\n",
         "print(\"PRIMERAS 5 FILAS DEL DATAFRAME\")\n",
-        "df.head()"
+        "diplay(dfhead())"
       ],
       "metadata": {
         "colab": {
           "base_uri": "https://localhost:8080/",
-          "height": 224
+          "height": 201
         },
         "id": "-98uiUQqJnz3",
-        "outputId": "61860e94-c07e-454c-fd93-b849145c3431"
+        "outputId": "6745a473-03cd-4eec-e9f1-37e267540568"
       },
-      "execution_count": 7,
+      "execution_count": 3,
       "outputs": [
         {
-          "output_type": "stream",
-          "name": "stdout",
-          "text": [
-            "PRIMERAS 5 FILAS DEL DATAFRAME\n"
+          "output_type": "error",
+          "ename": "NameError",
+          "evalue": "name 'pd' is not defined",
+          "traceback": [
+            "\u001b[0;31m---------------------------------------------------------------------------\u001b[0m",
+            "\u001b[0;31mNameError\u001b[0m                                 Traceback (most recent call last)",
+            "\u001b[0;32m/tmp/ipykernel_16471/3305372253.py\u001b[0m in \u001b[0;36m<cell line: 0>\u001b[0;34m()\u001b[0m\n\u001b[1;32m      1\u001b[0m \u001b[0murl\u001b[0m\u001b[0;34m=\u001b[0m\u001b[0;34m\"https://raw.githubusercontent.com/LINA078/Inteligencia_Artificial/main/Segundo_Corte/Taller_Pandas/Tecnologia.xlsx\"\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[0;32m----> 2\u001b[0;31m \u001b[0mdf\u001b[0m\u001b[0;34m=\u001b[0m\u001b[0mpd\u001b[0m\u001b[0;34m.\u001b[0m\u001b[0mread_excel\u001b[0m\u001b[0;34m(\u001b[0m\u001b[0murl\u001b[0m\u001b[0;34m)\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[0m\u001b[1;32m      3\u001b[0m \u001b[0mprint\u001b[0m\u001b[0;34m(\u001b[0m\u001b[0;34m\"PRIMERAS 5 FILAS DEL DATAFRAME\"\u001b[0m\u001b[0;34m)\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[1;32m      4\u001b[0m \u001b[0mdiplay\u001b[0m\u001b[0;34m(\u001b[0m\u001b[0mdfhead\u001b[0m\u001b[0;34m(\u001b[0m\u001b[0;34m)\u001b[0m\u001b[0;34m)\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n",
+            "\u001b[0;31mNameError\u001b[0m: name 'pd' is not defined"
           ]
-        },
-        {
-          "output_type": "execute_result",
-          "data": {
-            "text/plain": [
-              "     Producto   Precio  Cantidad  Costo_Envio   Categoria\n",
-              "0      Laptop  3500000         4        50000  Tecnologia\n",
-              "1      Mouse     80000        15        10000  Tecnologia\n",
-              "2     Teclado   120000        10        12000  Tecnologia\n",
-              "3       Silla   450000         5        30000     Oficina\n",
-              "4  Escritorio   900000         3        40000     Oficina"
-            ],
-            "text/html": [
-              "\n",
-              "  <div id=\"df-31ebc2c9-1038-4fff-a2c3-cf963c7fd26e\" class=\"colab-df-container\">\n",
-              "    <div>\n",
-              "<style scoped>\n",
-              "    .dataframe tbody tr th:only-of-type {\n",
-              "        vertical-align: middle;\n",
-              "    }\n",
-              "\n",
-              "    .dataframe tbody tr th {\n",
-              "        vertical-align: top;\n",
-              "    }\n",
-              "\n",
-              "    .dataframe thead th {\n",
-              "        text-align: right;\n",
-              "    }\n",
-              "</style>\n",
-              "<table border=\"1\" class=\"dataframe\">\n",
-              "  <thead>\n",
-              "    <tr style=\"text-align: right;\">\n",
-              "      <th></th>\n",
-              "      <th>Producto</th>\n",
-              "      <th>Precio</th>\n",
-              "      <th>Cantidad</th>\n",
-              "      <th>Costo_Envio</th>\n",
-              "      <th>Categoria</th>\n",
-              "    </tr>\n",
-              "  </thead>\n",
-              "  <tbody>\n",
-              "    <tr>\n",
-              "      <th>0</th>\n",
-              "      <td>Laptop</td>\n",
-              "      <td>3500000</td>\n",
-              "      <td>4</td>\n",
-              "      <td>50000</td>\n",
-              "      <td>Tecnologia</td>\n",
-              "    </tr>\n",
-              "    <tr>\n",
-              "      <th>1</th>\n",
-              "      <td>Mouse</td>\n",
-              "      <td>80000</td>\n",
-              "      <td>15</td>\n",
-              "      <td>10000</td>\n",
-              "      <td>Tecnologia</td>\n",
-              "    </tr>\n",
-              "    <tr>\n",
-              "      <th>2</th>\n",
-              "      <td>Teclado</td>\n",
-              "      <td>120000</td>\n",
-              "      <td>10</td>\n",
-              "      <td>12000</td>\n",
-              "      <td>Tecnologia</td>\n",
-              "    </tr>\n",
-              "    <tr>\n",
-              "      <th>3</th>\n",
-              "      <td>Silla</td>\n",
-              "      <td>450000</td>\n",
-              "      <td>5</td>\n",
-              "      <td>30000</td>\n",
-              "      <td>Oficina</td>\n",
-              "    </tr>\n",
-              "    <tr>\n",
-              "      <th>4</th>\n",
-              "      <td>Escritorio</td>\n",
-              "      <td>900000</td>\n",
-              "      <td>3</td>\n",
-              "      <td>40000</td>\n",
-              "      <td>Oficina</td>\n",
-              "    </tr>\n",
-              "  </tbody>\n",
-              "</table>\n",
-              "</div>\n",
-              "    <div class=\"colab-df-buttons\">\n",
-              "\n",
-              "  <div class=\"colab-df-container\">\n",
-              "    <button class=\"colab-df-convert\" onclick=\"convertToInteractive('df-31ebc2c9-1038-4fff-a2c3-cf963c7fd26e')\"\n",
-              "            title=\"Convert this dataframe to an interactive table.\"\n",
-              "            style=\"display:none;\">\n",
-              "\n",
-              "  <svg xmlns=\"http://www.w3.org/2000/svg\" height=\"24px\" viewBox=\"0 -960 960 960\">\n",
-              "    <path d=\"M120-120v-720h720v720H120Zm60-500h600v-160H180v160Zm220 220h160v-160H400v160Zm0 220h160v-160H400v160ZM180-400h160v-160H180v160Zm440 0h160v-160H620v160ZM180-180h160v-160H180v160Zm440 0h160v-160H620v160Z\"/>\n",
-              "  </svg>\n",
-              "    </button>\n",
-              "\n",
-              "  <style>\n",
-              "    .colab-df-container {\n",
-              "      display:flex;\n",
-              "      gap: 12px;\n",
-              "    }\n",
-              "\n",
-              "    .colab-df-convert {\n",
-              "      background-color: #E8F0FE;\n",
-              "      border: none;\n",
-              "      border-radius: 50%;\n",
-              "      cursor: pointer;\n",
-              "      display: none;\n",
-              "      fill: #1967D2;\n",
-              "      height: 32px;\n",
-              "      padding: 0 0 0 0;\n",
-              "      width: 32px;\n",
-              "    }\n",
-              "\n",
-              "    .colab-df-convert:hover {\n",
-              "      background-color: #E2EBFA;\n",
-              "      box-shadow: 0px 1px 2px rgba(60, 64, 67, 0.3), 0px 1px 3px 1px rgba(60, 64, 67, 0.15);\n",
-              "      fill: #174EA6;\n",
-              "    }\n",
-              "\n",
-              "    .colab-df-buttons div {\n",
-              "      margin-bottom: 4px;\n",
-              "    }\n",
-              "\n",
-              "    [theme=dark] .colab-df-convert {\n",
-              "      background-color: #3B4455;\n",
-              "      fill: #D2E3FC;\n",
-              "    }\n",
-              "\n",
-              "    [theme=dark] .colab-df-convert:hover {\n",
-              "      background-color: #434B5C;\n",
-              "      box-shadow: 0px 1px 3px 1px rgba(0, 0, 0, 0.15);\n",
-              "      filter: drop-shadow(0px 1px 2px rgba(0, 0, 0, 0.3));\n",
-              "      fill: #FFFFFF;\n",
-              "    }\n",
-              "  </style>\n",
-              "\n",
-              "    <script>\n",
-              "      const buttonEl =\n",
-              "        document.querySelector('#df-31ebc2c9-1038-4fff-a2c3-cf963c7fd26e button.colab-df-convert');\n",
-              "      buttonEl.style.display =\n",
-              "        google.colab.kernel.accessAllowed ? 'block' : 'none';\n",
-              "\n",
-              "      async function convertToInteractive(key) {\n",
-              "        const element = document.querySelector('#df-31ebc2c9-1038-4fff-a2c3-cf963c7fd26e');\n",
-              "        const dataTable =\n",
-              "          await google.colab.kernel.invokeFunction('convertToInteractive',\n",
-              "                                                    [key], {});\n",
-              "        if (!dataTable) return;\n",
-              "\n",
-              "        const docLinkHtml = 'Like what you see? Visit the ' +\n",
-              "          '<a target=\"_blank\" href=https://colab.research.google.com/notebooks/data_table.ipynb>data table notebook</a>'\n",
-              "          + ' to learn more about interactive tables.';\n",
-              "        element.innerHTML = '';\n",
-              "        dataTable['output_type'] = 'display_data';\n",
-              "        await google.colab.output.renderOutput(dataTable, element);\n",
-              "        const docLink = document.createElement('div');\n",
-              "        docLink.innerHTML = docLinkHtml;\n",
-              "        element.appendChild(docLink);\n",
-              "      }\n",
-              "    </script>\n",
-              "  </div>\n",
-              "\n",
-              "\n",
-              "    </div>\n",
-              "  </div>\n"
-            ],
-            "application/vnd.google.colaboratory.intrinsic+json": {
-              "type": "dataframe",
-              "variable_name": "df",
-              "summary": "{\n  \"name\": \"df\",\n  \"rows\": 60,\n  \"fields\": [\n    {\n      \"column\": \"Producto\",\n      \"properties\": {\n        \"dtype\": \"string\",\n        \"num_unique_values\": 60,\n        \"samples\": [\n          \"Laptop\",\n          \"Monitor\",\n          \"Ventilador\"\n        ],\n        \"semantic_type\": \"\",\n        \"description\": \"\"\n      }\n    },\n    {\n      \"column\": \"Precio\",\n      \"properties\": {\n        \"dtype\": \"number\",\n        \"std\": 1357547,\n        \"min\": 25000,\n        \"max\": 5200000,\n        \"num_unique_values\": 52,\n        \"samples\": [\n          4300000,\n          25000,\n          5200000\n        ],\n        \"semantic_type\": \"\",\n        \"description\": \"\"\n      }\n    },\n    {\n      \"column\": \"Cantidad\",\n      \"properties\": {\n        \"dtype\": \"number\",\n        \"std\": 6,\n        \"min\": 1,\n        \"max\": 30,\n        \"num_unique_values\": 20,\n        \"samples\": [\n          4,\n          22,\n          16\n        ],\n        \"semantic_type\": \"\",\n        \"description\": \"\"\n      }\n    },\n    {\n      \"column\": \"Costo_Envio\",\n      \"properties\": {\n        \"dtype\": \"number\",\n        \"std\": 21836,\n        \"min\": 4000,\n        \"max\": 90000,\n        \"num_unique_values\": 25,\n        \"samples\": [\n          18000,\n          22000,\n          50000\n        ],\n        \"semantic_type\": \"\",\n        \"description\": \"\"\n      }\n    },\n    {\n      \"column\": \"Categoria\",\n      \"properties\": {\n        \"dtype\": \"category\",\n        \"num_unique_values\": 2,\n        \"samples\": [\n          \"Oficina\",\n          \"Tecnologia\"\n        ],\n        \"semantic_type\": \"\",\n        \"description\": \"\"\n      }\n    }\n  ]\n}"
-            }
-          },
-          "metadata": {},
-          "execution_count": 7
         }
       ]
     },
@@ -289,7 +118,7 @@
         "id": "IU1-2cnDVXEQ",
         "outputId": "98b55147-01f8-4bb1-d22a-15eb9cccea38"
       },
-      "execution_count": 6,
+      "execution_count": null,
       "outputs": [
         {
           "output_type": "stream",
@@ -543,7 +372,7 @@
         "id": "pfDZkpI9WNWQ",
         "outputId": "015610d5-ca48-45cf-b3c1-3ddda85a349f"
       },
-      "execution_count": 11,
+      "execution_count": null,
       "outputs": [
         {
           "output_type": "stream",
@@ -638,7 +467,7 @@
         "id": "tez7GJlTWa7G",
         "outputId": "a422be41-c478-4312-e257-9d432ae592b3"
       },
-      "execution_count": 12,
+      "execution_count": null,
       "outputs": [
         {
           "output_type": "stream",
@@ -682,7 +511,7 @@
         "id": "t2t6PlNVWpqM",
         "outputId": "ac61edc5-cbc1-4aab-d506-1f3ceec0ccce"
       },
-      "execution_count": 8,
+      "execution_count": null,
       "outputs": [
         {
           "output_type": "stream",
@@ -901,7 +730,7 @@
         "id": "g0x1riUYYFkw",
         "outputId": "30256282-c7b3-4b08-bc0c-63866342befe"
       },
-      "execution_count": 9,
+      "execution_count": null,
       "outputs": [
         {
           "output_type": "stream",
@@ -1215,7 +1044,7 @@
         "id": "FtbV3kbVYjGV",
         "outputId": "aff46e46-44ac-474a-9278-0e40ea538bc5"
       },
-      "execution_count": 15,
+      "execution_count": null,
       "outputs": [
         {
           "output_type": "stream",
@@ -1561,7 +1390,7 @@
         "id": "VYpC6VJ-Y8EP",
         "outputId": "f1ca204e-7ecd-4ae9-ce30-36387064f1e1"
       },
-      "execution_count": 16,
+      "execution_count": null,
       "outputs": [
         {
           "output_type": "stream",
@@ -1595,7 +1424,7 @@
         "id": "VNVHgJHHZR8H",
         "outputId": "294c28de-1721-4608-8c02-02be65a45273"
       },
-      "execution_count": 17,
+      "execution_count": null,
       "outputs": [
         {
           "output_type": "stream",
@@ -1638,7 +1467,7 @@
         "id": "yepSuV4kZ2mS",
         "outputId": "46645529-c1bf-4e1e-877a-5bb800b5e4fa"
       },
-      "execution_count": 18,
+      "execution_count": null,
       "outputs": [
         {
           "output_type": "stream",
@@ -1685,7 +1514,7 @@
         "id": "q9b97lrL3wzz",
         "outputId": "c178e106-4aae-493c-cf8e-ecac6eca9f20"
       },
-      "execution_count": 14,
+      "execution_count": null,
       "outputs": [
         {
           "output_type": "stream",
@@ -2064,7 +1893,7 @@
         "id": "vuTweYY_d8Uz",
         "outputId": "a5fecfcd-397f-48a7-f62d-da55ea9debd4"
       },
-      "execution_count": 15,
+      "execution_count": null,
       "outputs": [
         {
           "output_type": "stream",
@@ -2476,7 +2305,7 @@
         "id": "hl5gFeX1eczn",
         "outputId": "0e62786b-506f-428b-958f-2df3e6554ba9"
       },
-      "execution_count": 16,
+      "execution_count": null,
       "outputs": [
         {
           "output_type": "stream",
@@ -2897,7 +2726,7 @@
         "id": "9zE8jJb2fD2-",
         "outputId": "2ec2dfbe-3d7d-41fc-a213-f2c64040601e"
       },
-      "execution_count": 17,
+      "execution_count": null,
       "outputs": [
         {
           "output_type": "stream",
@@ -3313,7 +3142,7 @@
         "id": "bnLLG0QSffV_",
         "outputId": "094a76b6-578e-4ca8-a024-384e4e30611b"
       },
-      "execution_count": 39,
+      "execution_count": null,
       "outputs": [
         {
           "output_type": "stream",
@@ -3757,7 +3586,7 @@
         "id": "JTEx5UmbKYYz",
         "outputId": "4728759d-c786-4f49-f1da-04cfd6edd2a7"
       },
-      "execution_count": 40,
+      "execution_count": null,
       "outputs": [
         {
           "output_type": "stream",
@@ -3804,7 +3633,7 @@
         "id": "ZzgROIiLM8-2",
         "outputId": "a1d782e9-9eab-4131-e230-ba2f565e5633"
       },
-      "execution_count": 30,
+      "execution_count": null,
       "outputs": [
         {
           "output_type": "stream",
